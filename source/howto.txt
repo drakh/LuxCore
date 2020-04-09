@@ -1,0 +1,6 @@
+1. cmd+shift+p
+- go for the json and copy paste from .vscode from pavol
+2. cmd+shift+task
+- configure default build task -> copy paste from the above
+3. cmd+shift+launch
+-||-

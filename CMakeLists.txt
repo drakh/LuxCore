@@ -191,7 +191,7 @@ if(NOT APPLE OR OSX_BUILD_DEMOS)
 endif()
 
 add_subdirectory(samples/luxcoreconsole)
-
+add_subdirectory(source)
 if(OPENGL_FOUND)
 	add_subdirectory(samples/luxcoreui)
 endif(OPENGL_FOUND)
