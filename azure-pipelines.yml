@@ -56,15 +56,7 @@ jobs:
       build_script: './scripts/azurepipeline/windows/build.cmd /cmake-only /no-ocl'
       post_script: './scripts/azurepipeline/windows/post-build.cmd /no-ocl'
       ocl_text: 'OpenCL disabled'
-      minimalargs: '/target:pyluxcore,pyluxcoretools,luxcoreui'
-  - template: ./scripts/azurepipeline/windows/windows_jobs.yml
-    parameters:
-      build_script: './scripts/azurepipeline/windows/build.cmd /cmake-only'
-      post_script: './scripts/azurepipeline/windows/post-build.cmd'
-      ocl_text: 'OpenCL enabled'
-      minimalargs: '/target:pyluxcore,pyluxcoretools,luxcoreui'
-  - script: './scripts/azurepipeline/windows/test.cmd'
-    displayName: Testing LuxCore
+      minimalargs: '/target:luxcoreui,luxcoreconsole'
   - task: PublishBuildArtifacts@1
     inputs:
       pathtoPublish: '$(Build.ArtifactStagingDirectory)'
